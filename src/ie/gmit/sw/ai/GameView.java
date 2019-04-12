@@ -1,8 +1,15 @@
 package ie.gmit.sw.ai;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+import ie.gmit.sw.ai.sprites.Sprite;
 public class GameView extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
 	public static final int DEFAULT_VIEW_SIZE = 800;	

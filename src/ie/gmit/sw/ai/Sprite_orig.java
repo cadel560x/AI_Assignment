@@ -3,13 +3,13 @@ package ie.gmit.sw.ai;
 import javax.imageio.*;
 import java.awt.image.*;
 
-public class Sprite {
+public class Sprite_orig {
 	private String name; //The name of this sprite
 	private BufferedImage[][] images; //The set of image frames to animate
  	private int index = 0; //Initial starting direction that the sprite is facing
  	private int frame = 0; //Initial starting index of the image 
 	
-	public Sprite(String name, int frames, String... files) throws Exception{
+	public Sprite_orig(String name, int frames, String... files) throws Exception{
 		this.name = name;
 		this.index = 0; //Initialise the starting index to zero
 		this.images = new BufferedImage[files.length / frames][frames]; //Initialise the image frames

@@ -1,8 +1,16 @@
 package ie.gmit.sw.ai;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
+import javax.swing.JFrame;
+
+import ie.gmit.sw.ai.sprites.FuzzySprite;
+import ie.gmit.sw.ai.sprites.ItemSprite;
+import ie.gmit.sw.ai.sprites.NeuralSprite;
+import ie.gmit.sw.ai.sprites.Sprite;
 public class GameRunner implements KeyListener{
 	private static final int MAZE_DIMENSION = 100;
 	private static final int IMAGE_COUNT = 14;
@@ -99,7 +107,8 @@ public class GameRunner implements KeyListener{
 		player = new ControlledSprite("Main Player", 3, "resources/images/player/d1.png", "resources/images/player/d2.png", "resources/images/player/d3.png", "resources/images/player/l1.png", "resources/images/player/l2.png", "resources/images/player/l3.png", "resources/images/player/r1.png", "resources/images/player/r2.png", "resources/images/player/r3.png");
 		
 		Sprite[] sprites = new Sprite[IMAGE_COUNT];
-		sprites[0] = new Sprite("Hedge", 1, "resources/images/objects/hedge.png");
+		/*
+		sprites[0] = new ItemSprite("Hedge", 1, "resources/images/objects/hedge.png");
 		sprites[1] = new Sprite("Sword", 1, "resources/images/objects/sword.png");
 		sprites[2] = new Sprite("Help", 1, "resources/images/objects/help.png");
 		sprites[3] = new Sprite("Bomb", 1, "resources/images/objects/bomb.png");
@@ -113,6 +122,22 @@ public class GameRunner implements KeyListener{
 		sprites[11] = new Sprite("Orange Spider", 2, "resources/images/spiders/orange_spider_1.png", "resources/images/spiders/orange_spider_2.png");
 		sprites[12] = new Sprite("Red Spider", 2, "resources/images/spiders/red_spider_1.png", "resources/images/spiders/red_spider_2.png");
 		sprites[13] = new Sprite("Yellow Spider", 2, "resources/images/spiders/yellow_spider_1.png", "resources/images/spiders/yellow_spider_2.png");
+		*/
+		sprites[0] = new ItemSprite("Hedge", "resources/hedge.png");
+		sprites[1] = new ItemSprite("Sword", "resources/sword.png");
+		sprites[2] = new ItemSprite("Help", "resources/help.png");
+		sprites[3] = new ItemSprite("Bomb", "resources/bomb.png");
+		sprites[4] = new ItemSprite("Hydrogen Bomb", "resources/h_bomb.png");
+		sprites[5] = new ItemSprite("Spartan Warrior", "resources/spartan_1.png", "resources/spartan_2.png");
+		sprites[6] = new FuzzySprite("Black Spider", "resources/black_spider_1.png", "resources/black_spider_2.png");
+		sprites[7] = new FuzzySprite("Blue Spider", "resources/blue_spider_1.png", "resources/blue_spider_2.png");
+		sprites[8] = new FuzzySprite("Brown Spider", "resources/brown_spider_1.png", "resources/brown_spider_2.png");
+		sprites[9] = new FuzzySprite("Green Spider", "resources/green_spider_1.png", "resources/green_spider_2.png");
+		sprites[10] = new NeuralSprite("Grey Spider", "resources/grey_spider_1.png", "resources/grey_spider_2.png");
+		sprites[11] = new NeuralSprite("Orange Spider", "resources/orange_spider_1.png", "resources/orange_spider_2.png");
+		sprites[12] = new NeuralSprite("Red Spider", "resources/red_spider_1.png", "resources/red_spider_2.png");
+		sprites[13] = new NeuralSprite("Yellow Spider", "resources/yellow_spider_1.png", "resources/yellow_spider_2.png");
+		
 		return sprites;
 	}
 	

@@ -1,7 +1,7 @@
 package ie.gmit.sw.ai;
 
-import javax.imageio.*;
-import java.awt.image.*;
+import ie.gmit.sw.ai.sprites.Sprite;
+
 public class ControlledSprite extends Sprite{	
 	public ControlledSprite(String name, int frames, String... images) throws Exception{
 		super(name, frames, images);
